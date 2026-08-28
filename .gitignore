@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+.positai
+.DS_Store
+
+# Individual-level patient data - must not be published
+raw_data/
