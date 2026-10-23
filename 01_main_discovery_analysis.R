@@ -83,6 +83,12 @@ for (v in c("Medication", "Antidepressants", "Antipsychotics", "Benzodiazepines"
   swdata[[v]] <- relevel(swdata[[v]], ref = "no")
 }
 
+# Drug classes were recorded only for patients receiving psychotropic
+# medication. For patients without medication they are "not prescribed",
+# not missing.
+for (v in c("Antidepressants", "Antipsychotics", "Benzodiazepines")) {
+  swdata[[v]][swdata$Medication == "no" & is.na(swdata[[v]])] <- "no"
+}
 
 ## 2.3 Drop administrative and unused columns ----------------------------------
 # TAQ_T0_43 is a check-up item and is not part of any subscale.

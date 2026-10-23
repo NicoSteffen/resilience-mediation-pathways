@@ -125,9 +125,10 @@ n_percent <- function(x, digits = 1) {
 
 # ---- TAQ scoring -------------------------------------------------------------
 
-# Scoring follows the TAQ manual (Spinazzola et al., 2019). The German version
-# administered here excludes the two "family secrets" items and the check-up
-# item 43, leaving 40 items renumbered 1-40, over three developmental periods
+# Scoring follows the TAQ manual (Spinazzola, 2019). The German version
+# administered here has 43 items; items 9 and 24 (the former "family secrets"
+# scale) and the check-up item 43 are not scored, leaving the 40 items of the
+# current version, renumbered 1-40, over three developmental periods
 # (a = childhood 7-12, b = youth 13-18, c = adulthood >18).
 #
 # Response-label -> score maps live in each analysis script, because the two
@@ -135,7 +136,8 @@ n_percent <- function(x, digits = 1) {
 # itself is identical:
 #   often / very much = 3, occasionally = 2, rarely = 0, never = 0,
 #   yes = 3, no = 0, don't know = 0
-# and reversed for TAQ item 2, the only positively worded item.
+# and reversed for TAQ item 2, the only positively worded item in an adverse
+# domain (neglect).
 
 #' Recode item columns from labelled responses to numeric scores
 #'
